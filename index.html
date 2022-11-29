@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form Page</title>
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<style>
+    body {
+        background-color: #5b8ea2;
+        /* margin: 0; */
+    }
+
+    .container {
+        width: 40%;
+        background-color: #fAFAFA;
+        margin: auto;
+        border-radius: 5px;
+        border: 1px solid #fAFAFA;
+    }
+
+    .form_header {
+        background-color: #EFF0F2;
+        color: #6A6B6D;
+        height: 50px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 15px;
+    }
+
+    .form_footer {
+        background-color: #EFF0F2;
+        color: #6A6B6D;
+        border-top: 1px solid #ccc;
+        padding: 18px 10%;
+        height: 20px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        margin-top: 0;
+        padding: 10px 0px;
+    }
+
+    .label_color {
+        color: #2ABF9A;
+        font-weight: 600;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .form_content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .inline_section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .p_content {
+        width: 45%;
+    }
+
+    .content_input {
+        width: 100%;
+    }
+
+    .fully_input {
+        width: 100%;
+    }
+
+    p {
+        margin-top: 0px ;
+        margin-bottom: 15px;
+    }
+
+    .submit_btu {
+        color: white;
+        background-color: #1DB991;
+        border: none;
+        border-radius: 4px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- Form Header  -->
+        <div class="form_header">
+            <h2 style="text-align:center">Create Account</h2>
+        </div>
+        <!-- Form Body  -->
+        <form>
+            <div class="form_content">
+                <!-- Name -->
+                <div class="inline_section">
+                    <p class="p_content">
+                        <label class="label_color" for="text_FirstName">First name*</label>
+                        <br />
+                        <input class="content_input" id="text_FirstName" type="text" placeholder="enter your first name"
+                            autofocus required />
+                    </p>
+                    <p class="p_content">
+                        <label class="label_color" for="text_LastName">Last name*</label>
+                        <br />
+                        <input class="content_input" id="text_LastName" type="text" placeholder="enter your last name"
+                            autofocus required />
+                    </p>
+                </div>
+                <!-- Email -->
+                <p>
+                    <label class="label_color" for="text_Email">Email*</label>
+                    <br />
+                    <input class="fully_input" id="text_Email" type="email" placeholder="enter your email" autofocus
+                        required />
+                </p>
+                <!-- Password -->
+                <div class="inline_section">
+                    <p class="p_content">
+                        <label class="label_color" for="text_Password">Password*</label>
+                        <br />
+                        <input class="content_input" id="text_Password" type="password"
+                            placeholder="enter your password" autofocus required />
+                    </p>
+                    <p class="p_content">
+                        <label class="label_color" for="text_ConfirmPassword">Confirm Password*</label>
+                        <br />
+                        <input class="content_input" id="text_ConfirmPassword" type="password"
+                            placeholder="enter your password again" autofocus required />
+                    </p>
+                </div>
+                <!-- Gender and Hobbies -->
+                <div class="inline_section">
+                    <p class="p_content">
+                        <label class="label_color">Gender:</label>
+                        <br />
+                        <input id="Rad1" type="radio" value="Male" name="Gender" />
+                        <label for="Rad1">Male</label>
+                        <input id="Rad2" type="radio" value="Female" name="Gender" />
+                        <label for="Rad2">Female</label>
+                    </p>
+                    <p class="p_content">
+                        <label class="label_color">Hobbies:</label>
+                        <br />
+                        <input type="checkbox" name="hobby" value="music" id="music">
+                        <label for="music">Music</label>
+                        <input type="checkbox" name="hobby" value="sports" id="sport" />
+                        <label for="sport">Sports</label>
+                        <input type="checkbox" name="hobby" value="travel" id="travel" />
+                        <label for="travel">Travel</label>
+                        <input type="checkbox" name="hobby" value="movies" id="movies" />
+                        <label for="movies">Movies</label>
+                    </p>
+                </div>
+                <!-- Income -->
+                <div class="inline_section">
+                    <p class="p_content">
+                        <label class="label_color" for="state">Sources of Income</label>
+                        <br />
+                        <select class="content_input" id="state">
+                            <option value="1">Employed</option>
+                        </select>
+                    </p>
+                    <p class="p_content">
+                        <label class="label_color" for="rang">Income</label>
+                        <br />
+                        <input id="rang" type="range" id="vol" name="vol" min="0" max="20" />
+                        <input class="submit_btu" type="submit" value="20k" style="padding: 5px;" />
+                    </p>
+                </div>
+                <!-- Profile Picture and Age -->
+                <div class="inline_section">
+                    <p class="p_content">
+                        <label class="label_color">Upload Profile Picture</label>
+                        <br />
+                        <button onclick="document.getElementById('getFile').click()"
+                            style="font-size: 12px;"><b>Browse...</b></button>
+                        <input type='file' id="getFile" style="display:none" />code.iframe.png
+                    </p>
+                    <p class="p_content">
+                        <label class="label_color" for="quantity">Age</label>
+                        <br />
+                        <input class="content_input" type="number" id="quantity" name="quantity" min="1" max="100" />
+                    </p>
+                </div>
+                <!-- Bio -->
+                <p style="margin-bottom: 0px;">
+                    <label class="label_color" for="bio">Bio</label>
+                    <br />
+                    <textarea class="fully_input" id="bio" name="bio" style="height:60px ;"></textarea>
+                </p>
+            </div>
+            <!-- Form Footer  -->
+            <div class="form_footer">
+                <span>
+                    <i>*required</i>
+                </span>
+                <input class="submit_btu" type="submit" value="Create" style="float:right;padding: 5px 15px;" />
+            </div>
+        </form>
+    </div>
+</body>
